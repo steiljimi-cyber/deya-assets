@@ -1,0 +1,55 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.com.deyadeyadeya.membership",
+  "teamIdentifier": "YOUR_TEAM_ID",
+  "serialNumber": "MEMBERSHIP-0001",
+  "organizationName": "deyadeyadeya",
+  "description": "deyadeyadeya membership",
+  "backgroundColor": "rgb(14,15,10)",
+  "foregroundColor": "rgb(255,255,255)",
+  "labelColor": "rgb(217,255,67)",
+  "barcodes": [
+    {
+      "format": "PKBarcodeFormatQR",
+      "message": "DEYA-MBR-0001",
+      "messageEncoding": "iso-8859-1",
+      "altText": "DEYA-MBR-0001"
+    }
+  ],
+  "generic": {
+    "headerFields": [
+      {
+        "key": "tier",
+        "label": "TIER",
+        "value": "Founding"
+      }
+    ],
+    "primaryFields": [
+      {
+        "key": "member",
+        "label": "MEMBER",
+        "value": "Your Name"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "no",
+        "label": "MEMBER NO.",
+        "value": "0001"
+      },
+      {
+        "key": "since",
+        "label": "SINCE",
+        "value": "2026-11-19T00:00:00Z",
+        "dateStyle": "PKDateStyleMedium"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "terms",
+        "label": "About",
+        "value": "Show this card at the door. Edit pass.json to change any field."
+      }
+    ]
+  }
+}

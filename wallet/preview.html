@@ -1,0 +1,113 @@
+<title>deyadeyadeya Wallet Passes</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: a light gallery wall, four passes at true Wallet proportions, each with a spec caption under it */
+:root {
+  --bg: #F2F3EC; --fg: #17180F; --muted: #6A6D5C; --rule: #DCDED0;
+  --lime: #D9FF43; --ink: #0E0F0A;
+  --sans: Inter, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #15160F; --fg: #EDEEE4; --muted: #9A9D8A; --rule: #2C2E22; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #15160F; --fg: #EDEEE4; --muted: #9A9D8A; --rule: #2C2E22; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); }
+.wrap { max-width: 1480px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 36px; }
+h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: -0.04em; margin: 0; line-height: 1; }
+h1 span:nth-child(2) { opacity: .5 } h1 span:nth-child(3) { opacity: .25 }
+header p { margin: 0; color: var(--muted); max-width: 46ch; line-height: 1.5; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px 28px; }
+figure { margin: 0; display: grid; gap: 14px; justify-items: center; }
+figcaption { width: 100%; max-width: 340px; border-top: 1px solid var(--rule); padding-top: 10px; display: grid; gap: 4px; }
+figcaption b { font-size: 15px; }
+figcaption code { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+
+/* ---- the pass itself (colors are the pass's own, fixed in both themes) ---- */
+.pass { --pbg: var(--ink); --pfg: #fff; --plabel: var(--lime);
+  width: 100%; max-width: 340px; background: var(--pbg); color: var(--pfg); border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 18px 40px -18px rgba(20,22,0,.45); overflow: hidden;
+  display: flex; flex-direction: column; font-family: -apple-system, "SF Pro Text", var(--sans); }
+.pass.lime { --pbg: #D9FF43; --pfg: #0E0F0A; --plabel: #4E5C12; }
+.pass.event { --pfg: #D9FF43; --plabel: #A0AA8C;
+  -webkit-mask: radial-gradient(circle 22px at 50% 0, transparent 21px, #000 22px);
+          mask: radial-gradient(circle 22px at 50% 0, transparent 21px, #000 22px); }
+.top { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px 8px; min-height: 50px; }
+.top img { height: 25px; width: auto; }
+.f { display: grid; gap: 1px; min-width: 0; }
+.f .l { font-size: 9.5px; font-weight: 600; letter-spacing: .06em; color: var(--plabel); }
+.f .v { font-size: 15px; font-weight: 500; }
+.top .f { text-align: right; } .top .v { font-size: 14px; }
+.strip { position: relative; }
+.strip img { display: block; width: 100%; }
+.strip .f { position: absolute; left: 14px; bottom: 12px; }
+.prim .v, .strip .v { font-size: 30px; font-weight: 400; letter-spacing: -0.01em; line-height: 1.1; }
+.prim { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 6px 14px 4px; }
+.prim img { width: 72px; height: 72px; border-radius: 0; }
+.row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px 0; }
+.row .f:last-child:not(:first-child) { text-align: right; }
+.qr { margin: 22px auto 18px; background: #fff; border-radius: 8px; padding: 10px 10px 6px; text-align: center; color: #0E0F0A; }
+.qr svg { display: block; width: 132px; height: 132px; }
+.qr small { font-size: 10px; font-family: var(--mono); }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1><span>deya</span><span>deya</span><span>deya</span></h1>
+    <p>Four Apple Wallet passes built on the lime from the brand mark. Every field is an example value you edit in each card's pass.json.</p>
+  </header>
+
+  <div class="grid">
+    <figure>
+      <div class="pass">
+        <div class="top"><img src="passes/membership.pass/logo@3x.png" alt="deyadeyadeya"><div class="f"><span class="l">TIER</span><span class="v">Founding</span></div></div>
+        <div class="prim"><div class="f"><span class="l">MEMBER</span><span class="v">Your Name</span></div><img src="passes/membership.pass/thumbnail@3x.png" alt=""></div>
+        <div class="row"><div class="f"><span class="l">MEMBER NO.</span><span class="v">0001</span></div><div class="f"><span class="l">SINCE</span><span class="v">Nov 19, 2026</span></div></div>
+        <div class="qr" data-qr="DEYA-MBR-0001"></div>
+      </div>
+      <figcaption><b>Membership</b><code>generic · black / white / lime labels · thumbnail</code></figcaption>
+    </figure>
+
+    <figure>
+      <div class="pass lime">
+        <div class="top"><img src="passes/loyalty.pass/logo@3x.png" alt="deyadeyadeya"><div class="f"><span class="l">NEXT REWARD</span><span class="v">4 to go</span></div></div>
+        <div class="strip"><img src="passes/loyalty.pass/strip@3x.png" alt="6 of 10 stamps"><div class="f"><span class="l">STAMPS</span><span class="v">6 / 10</span></div></div>
+        <div class="row"><div class="f"><span class="l">NAME</span><span class="v">Your Name</span></div><div class="f"><span class="l">REWARD</span><span class="v">Free item</span></div></div>
+        <div class="qr" data-qr="DEYA-LOY-0001"></div>
+      </div>
+      <figcaption><b>Stamp card</b><code>storeCard · lime / ink · 375×123 strip</code></figcaption>
+    </figure>
+
+    <figure>
+      <div class="pass event">
+        <div class="top"><img src="passes/event.pass/logo@3x.png" alt="deyadeyadeya"><div class="f"><span class="l">DATE</span><span class="v">12/12/26</span></div></div>
+        <div class="strip"><img src="passes/event.pass/strip@3x.png" alt=""><div class="f"><span class="l">EVENT</span><span class="v">deya night</span></div></div>
+        <div class="row"><div class="f"><span class="l">VENUE</span><span class="v">Venue name</span></div><div class="f"><span class="l">DOORS</span><span class="v">8:00 PM</span></div></div>
+        <div class="row"><div class="f"><span class="l">GUEST</span><span class="v">Your Name</span></div><div class="f"><span class="l">ENTRY</span><span class="v">GA</span></div></div>
+        <div class="qr" data-qr="DEYA-EVT-0001"></div>
+      </div>
+      <figcaption><b>Event ticket</b><code>eventTicket · ink / lime · 375×98 strip · notch</code></figcaption>
+    </figure>
+
+    <figure>
+      <div class="pass lime">
+        <div class="top"><img src="passes/contact.pass/logo@3x.png" alt="deyadeyadeya"><div class="f"><span class="l">STUDIO</span><span class="v">deyadeyadeya</span></div></div>
+        <div class="prim"><div class="f"><span class="l">NAME</span><span class="v">Your Name</span></div><img src="passes/contact.pass/thumbnail@3x.png" alt=""></div>
+        <div class="row"><div class="f"><span class="l">ROLE</span><span class="v">Your role</span></div><div class="f"><span class="l">INSTAGRAM</span><span class="v">@yourhandle</span></div></div>
+        <div class="qr" data-qr="https://your-site.example"></div>
+      </div>
+      <figcaption><b>Contact card</b><code>generic · lime / ink · QR opens your link</code></figcaption>
+    </figure>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+document.querySelectorAll('[data-qr]').forEach(el => {
+  const msg = el.dataset.qr;
+  try { const q = qrcode(0, 'M'); q.addData(msg); q.make(); el.innerHTML = q.createSvgTag({ cellSize: 4, margin: 0, scalable: true }); }
+  catch (e) { el.innerHTML = ''; }
+  const s = document.createElement('small'); s.textContent = msg; el.appendChild(s);
+});
+</script>

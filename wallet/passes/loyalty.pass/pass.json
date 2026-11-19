@@ -1,0 +1,56 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.com.deyadeyadeya.loyalty",
+  "teamIdentifier": "YOUR_TEAM_ID",
+  "serialNumber": "LOYALTY-0001",
+  "organizationName": "deyadeyadeya",
+  "description": "deyadeyadeya stamp card",
+  "backgroundColor": "rgb(217,255,67)",
+  "foregroundColor": "rgb(14,15,10)",
+  "labelColor": "rgb(78,92,18)",
+  "barcodes": [
+    {
+      "format": "PKBarcodeFormatQR",
+      "message": "DEYA-LOY-0001",
+      "messageEncoding": "iso-8859-1",
+      "altText": "DEYA-LOY-0001"
+    }
+  ],
+  "storeCard": {
+    "headerFields": [
+      {
+        "key": "reward",
+        "label": "NEXT REWARD",
+        "value": "4 to go"
+      }
+    ],
+    "primaryFields": [
+      {
+        "key": "stamps",
+        "label": "STAMPS",
+        "value": "6 / 10"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "name",
+        "label": "NAME",
+        "value": "Your Name"
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "perk",
+        "label": "REWARD",
+        "value": "Free item"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "how",
+        "label": "How it works",
+        "value": "One stamp per visit. Ten stamps earn a reward."
+      }
+    ]
+  }
+}

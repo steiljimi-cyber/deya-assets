@@ -1,0 +1,56 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.com.deyadeyadeya.contact",
+  "teamIdentifier": "YOUR_TEAM_ID",
+  "serialNumber": "CONTACT-0001",
+  "organizationName": "deyadeyadeya",
+  "description": "deyadeyadeya contact card",
+  "backgroundColor": "rgb(217,255,67)",
+  "foregroundColor": "rgb(14,15,10)",
+  "labelColor": "rgb(78,92,18)",
+  "barcodes": [
+    {
+      "format": "PKBarcodeFormatQR",
+      "message": "https://your-site.example",
+      "messageEncoding": "iso-8859-1",
+      "altText": "https://your-site.example"
+    }
+  ],
+  "generic": {
+    "headerFields": [
+      {
+        "key": "brand",
+        "label": "STUDIO",
+        "value": "deyadeyadeya"
+      }
+    ],
+    "primaryFields": [
+      {
+        "key": "name",
+        "label": "NAME",
+        "value": "Your Name"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "role",
+        "label": "ROLE",
+        "value": "Your role"
+      }
+    ],
+    "auxiliaryFields": [
+      {
+        "key": "ig",
+        "label": "INSTAGRAM",
+        "value": "@yourhandle"
+      }
+    ],
+    "backFields": [
+      {
+        "key": "email",
+        "label": "Email",
+        "value": "you@your-site.example"
+      }
+    ]
+  }
+}
