@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = ["crates/fixer-core", "crates/fixer-devserver", "src-tauri"]
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+opt-level = 3
+lto = "thin"

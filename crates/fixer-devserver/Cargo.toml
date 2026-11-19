@@ -1,0 +1,13 @@
+[package]
+name = "fixer-devserver"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+fixer-core = { path = "../fixer-core" }
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+tower-http = { version = "0.6", features = ["cors", "fs"] }
+serde_json = "1"
+anyhow = "1"

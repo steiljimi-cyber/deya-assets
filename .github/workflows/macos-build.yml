@@ -1,0 +1,21 @@
+# Builds the macOS app (.app + .dmg, Apple Silicon) and runs the test suites.
+# Manual trigger only, so it never spends Actions minutes unless you start it.
+name: macOS build
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: dtolnay/rust-toolchain@stable
+      - run: npm ci
+      - run: npm test
+      - run: cargo test -p fixer-core
+      - run: npx tauri build --bundles app,dmg
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Fixer-Film-Lab-macOS
+          path: target/release/bundle/dmg/*.dmg

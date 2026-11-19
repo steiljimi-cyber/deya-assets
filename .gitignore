@@ -1,0 +1,9 @@
+node_modules/
+dist/
+target/
+test-results/
+playwright-report/
+tests/fixtures/
+src-tauri/gen/
+*.fflab
+.DS_Store
